@@ -1,0 +1,15 @@
+Date: 13 April 2026
+Tool:curl
+Command:
+curl -X POST http://192.168.1.104:5050/api/mail/test \
+-H "Content-Type: application/json" \
+-d '{"to":"test@test.com"}'
+
+Raw output:
+{"ok":true,"messageId":"<e704825b-01c5-7997-083a-56c76b4e3685@gmail.com>",
+"accepted":["test@test.com"],"rejected":[],"response":"250 2.0.0 OK"}
+
+What this means:
+The /api/mail/test endpoint sends real emails to any address 
+with no authentication, no rate limiting, and no authorisation 
+check. Discovered through manual endpoint guessing

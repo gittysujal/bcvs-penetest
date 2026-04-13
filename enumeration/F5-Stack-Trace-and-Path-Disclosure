@@ -1,0 +1,15 @@
+Date: 13 April 2026
+Tool: curl
+Command:
+curl -X POST http://192.168.1.104:5050/api/mail/test \
+-H "Content-Type: application/json" \
+-d '{"to":"test"test.com"}'
+
+Raw output:
+SyntaxError: Expected ',' or '}' after property value
+/Users/sujal/Desktop/blockcred-mailer/node_modules/body-parser
+
+What this means:
+Sending malformed JSON causes the server to return a full 
+stack trace including the server's absolute file system path.
+No authentication required to trigger this.
